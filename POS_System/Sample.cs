@@ -15,7 +15,7 @@ namespace POS_System
         public Sample()
         {
             InitializeComponent();
-            guna2MessageDialog1.Parent = frmMain.Instance;
+            
         }
     }
 }

@@ -16,5 +16,12 @@ namespace POS_System
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain frm = new frmMain();    
+            frm.Show();
+        }
     }
 }
