@@ -26,7 +26,13 @@ namespace POS_System
         private void frmMain_Load(object sender, EventArgs e)
         {
             _obj = this;
+            btnMax.PerformClick();
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
