@@ -65,6 +65,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainClass.cs" />
     <Compile Include="Sample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +133,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14291991451579780443-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\832654301679546296-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15741855151645016396-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3209291_contacts_customers_family_group_team_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11811211591636434366-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4198867881674479429-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14291991451579780443-1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8606586861554125686-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3581263791586787809-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
