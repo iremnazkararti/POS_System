@@ -16,17 +16,17 @@ namespace POS_System
 {
     class MainClass
     {
-        public static readonly string con_string = "Data Source=DESKTOP-CEI2CNA;Initial Catalog = POS; Persist Security Info= True; User ID=sa; Password=123;";
+        public static readonly string con_string = "Data Source=DESKTOP-CEI2CNA;Initial Catalog=RM;Integrated Security=True;TrustServerCertificate=True";
         public static SqlConnection con = new SqlConnection(con_string);
 
 
         //Method to check User Validation
 
-        public static bool IsValidUser(string user, string password)
+        public static bool IsValidUser(string user, string pass)
         {
             bool isValid = false;
 
-            string qry = @"Select * from users where username = '" + user + "' and upass = '" + password + "' ";
+            string qry = @"Select * from users where username = '" + user + "' and upass = '" + pass + "' ";
             SqlCommand cmd = new SqlCommand(qry, con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
