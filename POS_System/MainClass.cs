@@ -18,7 +18,7 @@ namespace POS_System
 {
     class MainClass
     {
-        public static readonly string con_string = "Data Source=DESKTOP-CEI2CNA;Initial Catalog=RM;Integrated Security=True;TrustServerCertificate=True";
+        public static readonly string con_string = "Data Source=DESKTOP-CEI2CNA;Initial Catalog=POS;Integrated Security=True;Pooling=False;Encrypt=True;TrustServerCertificate=True";
         public static SqlConnection con = new SqlConnection(con_string);
 
 
