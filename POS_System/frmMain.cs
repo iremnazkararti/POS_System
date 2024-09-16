@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using POS_System.View;
+
 
 namespace POS_System
 {
@@ -41,6 +43,11 @@ namespace POS_System
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmUserView());
         }
     }
 }

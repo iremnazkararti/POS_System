@@ -16,5 +16,10 @@ namespace POS_System.View
         {
             InitializeComponent();
         }
+
+        private void frmUserView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
