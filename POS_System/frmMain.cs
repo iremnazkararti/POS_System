@@ -37,6 +37,7 @@ namespace POS_System
             CenterPanel.Controls.Add(F);
             F.Show();
         }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
