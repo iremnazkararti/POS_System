@@ -11,6 +11,8 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Text;
 using System.IO;
+using System.Web.UI;
+using TheArtOfDevHtmlRenderer.Adapters.Entities;
 
 namespace POS_System
 {
@@ -50,7 +52,7 @@ namespace POS_System
         {
             try
             {
-                typeof(Control).InvokeMember("DoubleBuffered",
+                typeof(System.Windows.Forms.Control).InvokeMember("DoubleBuffered",
                     BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
                     null, ctr, new object[] { doubleBuffer });
             }
@@ -189,6 +191,47 @@ namespace POS_System
         }
 
         public static bool Validation(Form F)
+        {
+            bool isValid = false;
+            int count = 0;
 
+            foreach (System.Windows.Forms.Control c in F.Controls)
+            {
+                //doğrulamak isteyip istemediğimizi kontrol etmek için kontrolün etiketini kullanma
+                if (Convert.ToString(c.Tag) != "" && Convert.ToString(c.Tag) != null)
+                {
+                    if (c is Guna.UI2.WinForms.Guna2TextBox)
+                    {
+                        Guna.UI2.WinForms.Guna2TextBox t = (Guna.UI2.WinForms.Guna2TextBox)c;
+                        if (t.Text.Trim() == "")
+                        {
+                            t.BorderColor = Color.Red;
+                            t.FocusedState.BorderColor = Color.Red;
+                            t.HoverState.BorderColor = Color.Red;
+                            count++;
+                        }
+                        else
+                        {
+                            t.BorderColor = Color.FromArgb(213, 218, 223);
+                            t.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+                            t.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+                        }
+                    }
+                }
+
+                if (count == 0)
+                {
+                    isValid = true;
+
+                }
+                else
+                {
+                    isValid = false;
+                }
+
+            }
+
+            return isValid;
+        }
     }
 }

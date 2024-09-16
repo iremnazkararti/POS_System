@@ -77,6 +77,7 @@
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(229, 48);
             this.txtName.TabIndex = 0;
+            this.txtName.Tag = "v";
             this.txtName.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // txtUser
@@ -100,6 +101,7 @@
             this.txtUser.SelectedText = "";
             this.txtUser.Size = new System.Drawing.Size(229, 48);
             this.txtUser.TabIndex = 1;
+            this.txtUser.Tag = "v";
             this.txtUser.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // label3
@@ -132,6 +134,7 @@
             this.txtPass.SelectedText = "";
             this.txtPass.Size = new System.Drawing.Size(229, 48);
             this.txtPass.TabIndex = 2;
+            this.txtPass.Tag = "v";
             this.txtPass.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // label4
