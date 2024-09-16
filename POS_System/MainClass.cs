@@ -187,5 +187,8 @@ namespace POS_System
             cb.DataSource = dt;
             cb.SelectedIndex = -1;
         }
+
+        public static bool Validation(Form F)
+
     }
 }
