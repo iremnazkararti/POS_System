@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.SuspendLayout();
+            // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog1.Caption = "POS";
+            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.guna2MessageDialog1.Parent = null;
+            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog1.Text = null;
             // 
             // Sample
             // 
@@ -46,6 +56,8 @@
         }
 
         #endregion
+
+        public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
     }
 }
 
