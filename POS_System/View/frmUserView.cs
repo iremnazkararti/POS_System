@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POS_System
+namespace POS_System.View
 {
-    public partial class SampleView : Sample
+    public partial class frmUserView : SampleView
     {
-        public SampleView()
+        public frmUserView()
         {
             InitializeComponent();
-        }
-
-        public virtual void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public virtual void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

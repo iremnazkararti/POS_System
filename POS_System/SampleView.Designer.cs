@@ -72,6 +72,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(229, 48);
             this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnAdd
             // 
@@ -90,7 +91,7 @@
             this.btnAdd.Size = new System.Drawing.Size(88, 45);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "ekle";
-            this.btnAdd.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label2
             // 
