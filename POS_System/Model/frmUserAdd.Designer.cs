@@ -129,13 +129,14 @@
             this.txtPass.Location = new System.Drawing.Point(37, 260);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '\0';
+            this.txtPass.PasswordChar = '●';
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
             this.txtPass.Size = new System.Drawing.Size(229, 48);
             this.txtPass.TabIndex = 2;
             this.txtPass.Tag = "v";
             this.txtPass.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -224,6 +225,7 @@
             this.Controls.Add(this.label2);
             this.Name = "frmUserAdd";
             this.Text = "frmUserAdd";
+            this.Load += new System.EventHandler(this.frmUserAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

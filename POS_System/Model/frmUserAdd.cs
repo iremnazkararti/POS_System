@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -81,12 +82,37 @@ namespace POS_System.Model
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Images (.jpg, .png)|.jpg;.png";
+            ofd.Filter = "Images (.jpg, .png)|*.png;*jpg";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 filePath = ofd.FileName;
                 txtPic.Image = new Bitmap(filePath);
             }
+        }
+
+        private void LoadImage()
+        {
+            string qry = @"Select uImage from users where userId = " + id + "";
+            SqlCommand cmd = new SqlCommand(qry,MainClass.con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            if(dt.Rows.Count>0)
+            {
+                Byte[] imageArray = (byte[])dt.Rows[0]["uImage"];
+                Byte[] imageByteArray = imageArray;
+                txtPic.Image = Image.FromStream(new MemoryStream(imageByteArray));
+            }
+        }
+
+        private void frmUserAdd_Load(object sender, EventArgs e)
+        {
+
+            if(id>0)
+            {
+                LoadImage();
+            }
+
         }
     }
 }
