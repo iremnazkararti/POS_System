@@ -91,7 +91,7 @@ namespace POS_System.View
                 if (MainClass.SQL(qry, ht) > 0)
                 {
                     guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                    guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogButtons.Information;
+                    guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
                     guna2MessageDialog1.Show("Başarıyla silindi...");
                     LoadData();
 
